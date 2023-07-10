@@ -7,7 +7,7 @@ tasks:
     description: add two numbers
     fn: com.jfs.sum
     args:
-      x: 1
+      x: 1         
       y: 2
   - id: sum_step2
     description: log the output in logs
