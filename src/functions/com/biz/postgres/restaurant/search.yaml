@@ -14,34 +14,7 @@ tasks:
         where: {
           location: { equals: <% (inputs.body.city) %> }
         }
-        # include:
-        #   menuItems: true
-        # where:
-        #   location:
-        #     equals: <% (inputs.body.city) %>
-        #   menuItems:
-        #       where:
-        #         couponCode:
-        #           contains: <% (inputs.body.couponCode) %>
-      # data: 
-      #   where:
-      #     location: <% (inputs.body.city) %>
-      #   include:
-      #     menuItems
-      # data:
-      #   include:
-      #       - menuItems
-      #   where:
-      #     location: <% (inputs.body.city) %>
-      #     menuItems:
-      #       where:
-      #         couponCode: <% (inputs.body.couponCode) %>
       config:
         method: Restaurant.findMany
-    # prisma:
-    #   restaurant:
-    #     findMany:
-    #       include:
-    #        - menuItems
 
       
