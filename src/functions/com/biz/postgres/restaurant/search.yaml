@@ -1,0 +1,11 @@
+summary: Fetch many Restaurant
+tasks:
+  - id: postgres_restaurant_search
+    fn: com.gs.datastore
+    args: 
+      datasource: postgres
+      data: 
+        where:
+          location: <% (inputs.body.city) %> 
+      config:
+        method: Restaurant.findMany
