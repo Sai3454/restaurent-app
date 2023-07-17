@@ -5,6 +5,15 @@ tasks:
     args:
       datasource: postgres
       data:
-        data: <% inputs.body %>
+        data: {
+                name: <% (inputs.body.name) %>,
+                since: <% (inputs.body.since) %>,
+                opsStartTime: <% (inputs.body.opsStartTime) %>,
+                opsEndTime: <% (inputs.body.opsEndTime) %>,
+                slug: <% (inputs.body.slug) %>,
+                ownerId: <% (inputs.body.ownerId) %>,
+                description: <% (inputs.body.description) %>,
+                location: <% (inputs.body.location) %>
+              }
       config:
         method: Restaurant.create

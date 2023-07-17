@@ -6,14 +6,14 @@ tasks:
       datasource: postgres
       data:
         include:
-          menuItems: {
+          menuItems: 
             where: {
-              couponCode: { equals: <% if(inputs.body.couponCode) then inputs.body.couponCode else "" %> }
+              couponCode: {has: <% if(inputs.body.couponCode) then inputs.body.couponCode else "" %>}
             }
-          }
         where: {
           location: { equals: <% (inputs.body.city) %> }
         }
+        
       config:
         method: Restaurant.findMany
 

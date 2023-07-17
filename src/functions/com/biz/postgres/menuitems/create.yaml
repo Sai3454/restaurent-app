@@ -5,6 +5,12 @@ tasks:
     args:
       datasource: postgres
       data:
-        data: <% inputs.body %>
+        data: 
+            name: <% (inputs.body.name) %>
+            description: <% (inputs.body.description) %>
+            price: <% (inputs.body.price) %>
+            couponCode: <% [...inputs.body.couponCode, ""] %>
+            restaurantId: <% (inputs.body.restaurantId) %>
+              
       config:
         method: MenuItems.create
